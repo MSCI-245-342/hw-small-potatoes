@@ -267,6 +267,7 @@ and then list the movies again to verify it is gone:
 ```
 Movie.find_each { |movie| puts movie.title }
 ```
+Type `quit` to exit the console.
 
 # 2. RESTful routes for movies.
 
