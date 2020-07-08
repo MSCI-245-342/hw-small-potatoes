@@ -44,7 +44,7 @@ The `rails new .` creates your new app in this directory.  This directory is cal
 
 Next, we need to finish setting up the database:
 ```
-rails db:create
+rails db:create db:migrate
 ```
 You may get a warning about "The dependency tzinfo-data...", and this warning can be safely ignored every time you see it.
 
