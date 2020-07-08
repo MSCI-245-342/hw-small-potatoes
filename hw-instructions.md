@@ -28,8 +28,6 @@ There isn't anything in your repo right now except the hw instructions, and the 
 
 Our first step is to use rails to make you a new app and to get it up and running at the "hello world" level.
 
-Our first step is to use rails to make you a new app and to get it up and running at the "hello world" level.
-
 Run the following command:
 
 ```
