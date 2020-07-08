@@ -1,6 +1,6 @@
 # Small Potatoes
 
-This assigment is a reworking of the assignment "Hello Rails" by Armando Fox.  It has been modified for MSCI 245 by Mark Smucker, July 2020.  The signficiant differences between the two is that this version is complete (Hello Rails is draft in progress) and this version works with current version of Ruby and Rails.
+This assignment is a reworking of the assignment "Hello Rails" by Armando Fox.  It has been modified for MSCI 245 by Mark Smucker, July 2020.  The signficiant differences between the two is that this version is complete (Hello Rails is draft in progress) and this version works with current version of Ruby and Rails.
 
 This assignment was tested using the MSCI-245-S20 stack (v3) on Codio.  It works with [Ruby 2.6.6](https://ruby-doc.org/core-2.6.6/) and [Rails 6.0.3.2](https://guides.rubyonrails.org/).
 
@@ -18,28 +18,31 @@ Parts:
 
 ## Part 0 - A new rails app
 
-Open up a terminal.
+Your repo should be named rottenpotatoes.
 
-Use the link provided in the homework instructions provided in Learn to create your GitHub repo for this assignment.
+If you do not have a directory named "rottenpotatoes", stop!  Go back to the homework instructions and properly clone your repo.
 
-Clone your repo.  Your repo should be named hw-hello-rails-githubusername, where githubusername is your GitHub user name. 
+`cd` into your repo directory: `cd rottenpotatoes`
 
-Once you have your repo cloned, follow the instructions in the file `hw-instructions.md`, which is found inside the repo.
+There isn't anything in your repo right now except the hw instructions, and the .git directory.
 
-`cd` into your repo directory.
-
-There isn't anything in your repo right now except a Readme.md file, the hw instructions, and the .git directory.
+Our first step is to use rails to make you a new app and to get it up and running at the "hello world" level.
 
 Our first step is to use rails to make you a new app and to get it up and running at the "hello world" level.
 
 Run the following command:
 
 ```
-rails new rottenpotatoes --skip-javascript --skip-test --skip-action-mailer --skip-action-mailbox --skip-action-text --skip-action-cable --skip-active-storage --skip-keeps --skip-spring --skip-sprockets --skip-turbolinks --database=postgresql 
+rails new . --skip-javascript --skip-test --skip-action-mailer --skip-action-mailbox --skip-action-text --skip-action-cable --skip-active-storage --skip-keeps --skip-spring --skip-sprockets --skip-turbolinks --database=postgresql 
 ```
-This creates your new app in a directory named `rottenpotatoes`.  This directory is called the **app root** directory for the new app.
+Before going further, you should add all of this generated content to git, commit it and push it to GitHub for backup:
+```
+git add --all
+git commit -m"ran rails new"
+git push
+```
 
-`cd` into rottenpotatoes.
+The `rails new .` creates your new app in this directory.  This directory is called the **app root** directory for the new app.
 
 Next, we need to finish setting up the database:
 ```
@@ -102,6 +105,8 @@ These are tables used by Rails.  Don't mess them up.
 To escape from psql, enter `\q`.
 
 # Part 1. Model making
+
+If you haven't done it recently, now is a good time to commit your repo and push to GitHub.  This gives you a backup in case of disaster.
 
 Let's have a simple entity model for movies: title, rating (G, PG, PG-13, R, etc.), description, and a release date.
 
@@ -266,6 +271,8 @@ Movie.find_each { |movie| puts movie.title }
 ```
 
 # 2. RESTful routes for movies.
+
+If you haven't done it recently, now is a good time to commit your repo and push to GitHub.  This gives you a backup in case of disaster.
 
 You can see the routes for our app by doing:
 ```
@@ -435,6 +442,8 @@ Try it out by going to /movies/1 , /movies/2, etc. in your browser.
 
 # Adding features
 
+If you haven't done it recently, now is a good time to commit your repo and push to GitHub.  This gives you a backup in case of disaster.
+
 Before you are done, we need you to add some further functionality to the app.
 
 ## A better index view
@@ -471,13 +480,26 @@ Because our database and Model currently have no restrictions on the data we sav
 
 # Submit Your Work
 
-1) Create a Heroku app named small-potatoes-watiamname, where watiamname is your WatIAM user name, and deploy your new game to that app.
++ Commit your repo and push to GitHub.
 
-1) Put your name and Heroku URL into the `Readme.md` file.  
++ Create a Heroku app named small-potatoes-watiamname, where watiamname is your WatIAM user name, and deploy your new game to that app.
 
-1) Commit your repo and push to GitHub.
++ Edit the README.md file to be:
 
-1) Verify that when viewing the Readme in GitHub, that it shows your full name and you can click on the Heroku URL and play your game.
+```
+# Small Potatoes
+
+Author: Your Name
+
+Heroku URL of deployed web app: http://replace-with-your-heroku-app-hostname/
+
+Notes: Any notes to TA or instructor or notes for yourself.
+```
+Put your name and Heroku URL into the `README.md` file.  
+
++ Commit your repo and push to GitHub.
+
++ Verify that when viewing the Readme in GitHub, that it shows your full name and you can click on the Heroku URL and play your game.
 
 Please note that you will not be able to mark your work as completed in Codio. You submit your work by committing it and pushing it to GitHub and Heroku. **The time of your last commit in GitHub will be used as the time of submission.**
 
