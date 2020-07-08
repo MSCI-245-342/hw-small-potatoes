@@ -483,6 +483,15 @@ Because our database and Model currently have no restrictions on the data we sav
 
 + Create a Heroku app named small-potatoes-watiamname, where watiamname is your WatIAM user name, and deploy your new game to that app.
 
++ Because we're using a database, we must also setup the database on Heroku:
+```
+heroku run rails db:migrate
+```
+Please also load the seed database:
+```
+heroku run rails db:seed
+```
+
 + Edit the README.md file to be:
 
 ```
